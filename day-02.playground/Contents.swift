@@ -36,3 +36,80 @@ let heights = [
 ]
 
 heights["Taylor Swift"]
+
+//Dictionary default values
+
+let favoriteIceCream = [
+    "Paul": "Chocolate",
+    "Sophie": "Vanilla"
+]
+
+favoriteIceCream["Paul"]
+
+favoriteIceCream["Charlotte"]
+
+favoriteIceCream["Charlotte", default: "Unknown"]
+
+//Creating empty collections
+
+var teams = [String: String]()
+
+teams["Paul"] = "Red"
+
+var results = [Int]()
+
+var words = Set<String>()
+var numbers = Set<Int>()
+
+var scores = Dictionary<String, Int>()
+var results1 = Array<Int>()
+
+//Enumerations
+
+let result = "failure"
+
+let result2 = "failed"
+let result3 = "fail"
+
+enum Result {
+    case success
+    case failure
+}
+
+let result4 = Result.failure
+
+//Enum associated values
+
+enum Activity {
+    case bored
+    case running
+    case talking
+    case singing
+}
+
+enum Activity1 {
+    case bored
+    case running(destination: String)
+    case talking(topic: String)
+    case singing(volume: Int)
+}
+
+let talking = Activity1.talking(topic: "football")
+
+//Enum raw values
+
+enum Planet: Int {
+    case mercury
+    case venus
+    case earth
+    case mars
+}
+
+let earth = Planet(rawValue: 2)
+
+enum Planet1: Int {
+    case mercury = 1
+    case venus
+    case earth
+    case mars
+}
